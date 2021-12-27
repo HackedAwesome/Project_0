@@ -12,19 +12,27 @@
       </div>
       <div id="night_mode">
         <div id="night_botton">
-          <input type="button" value="night">
+          <input type="button" value="night" onclick="
+            document.querySelector('body').style.backgroundColor = 'black'
+            document.querySelector('body').style.color = 'white'
+            document.querySelectorAll('.list_text').style.backgroundColor = 'white'
+          ">
         </div>
         <div id="night_botton">
-          <input type="button" value="day">
+          <input type="button" value="day" onclick="
+            document.querySelector('body').style.backgroundColor = 'white'
+            document.querySelector('body').style.color = 'black'
+            document.querySelectorAll('.list_text').style.cssText = 'backgroundColor : black'
+          ">
         </div>
       </div>
     </div>
     <div class="outline horizon">
       <div>
-        <ul class="menu">
-          <li><a href="Squid_Game.html"><h2>Squid Game</h2></a></li>
-          <li><h2 class="active">D.P.</h2></li>
-          <li><a href="Hellbound.html"><h2>Hellbound</h2></a></li>
+        <ul>
+          <li class="list"><a href="Squid_Game.html"><h2 class="list_text">Squid Game</h2></a></li>
+          <li class="list"><h2 class="active list_text">D.P.</h2></li>
+          <li class="list"><a href="Hellbound.html"><h2 class="list_text">Hellbound</h2></a></li>
         </ul>
       </div>
       <div id="img_outline">

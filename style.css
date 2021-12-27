@@ -18,12 +18,13 @@ img{
   margin-right: auto;
 }
 #night_mode{
-  width:80%;
-  float: right;
+  margin-left: auto;
+  margin-right: 0;
 }
 #night_botton{
-  height: 25px;
-  right: 0px;
+  display: grid;
+  height: 50%;
+  width: 100%;
 }
 .horizon{
   display: grid;
@@ -44,16 +45,18 @@ ul{
   margin: 0;
   padding: 0;
 }
-li{
+.list{
   list-style: none;
   padding: 0 25px 0 25px;
   border: 10px coral solid;
 }
-h2{
+/*
+.list_text{
   background-color: black;
 }
+*/
 .active{
-  color:white;
+  color:red;
   text-decoration: underline;
   box-sizing:
 }
