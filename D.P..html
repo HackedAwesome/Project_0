@@ -13,16 +13,44 @@
       <div id="night_mode">
         <div id="night_botton">
           <input type="button" value="night" onclick="
-            document.querySelector('body').style.backgroundColor = 'black'
-            document.querySelector('body').style.color = 'white'
-            document.querySelectorAll('.list_text').style.backgroundColor = 'white'
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            document.querySelectorAll('.list_text').style.cssText = 'background-color: yellow';
           ">
         </div>
         <div id="night_botton">
           <input type="button" value="day" onclick="
-            document.querySelector('body').style.backgroundColor = 'white'
-            document.querySelector('body').style.color = 'black'
-            document.querySelectorAll('.list_text').style.cssText = 'backgroundColor : black'
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+            var links = document.querySelectorAll('.list_text');
+          ">
+          <input type="button" id="night_day" value="night" onclick="
+            var target = document.querySelector('body');
+            if(this.value === 'night'){
+              target.style.backgroundColor = 'black';
+              target.style.color = 'white';
+              this.value = 'day';
+
+              var links = document.querySelectorAll('.list_text');
+              var i = 0;
+              while(i<links.length){
+                links[i].style.backgroundColor= 'white';
+                i = i+1;
+              }
+            }
+            else{
+              target.style.backgroundColor = 'white'
+              target.style.color = 'black';
+              this.value = 'night';
+
+              var links = document.querySelectorAll('.list_text');
+              var i = 0;
+              while(i<links.length){
+                links[i].style.backgroundColor= 'black';
+                i = i+1;
+              }
+
+            }
           ">
         </div>
       </div>
