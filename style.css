@@ -20,10 +20,11 @@ img{
 #night_mode{
   margin-left: auto;
   margin-right: 0;
+  aspect-ratio: 1 / 1;
 }
 #night_botton{
   display: grid;
-  height: 50%;
+  height: 100%;
   width: 100%;
 }
 .horizon{
@@ -50,13 +51,11 @@ ul{
   padding: 0 25px 0 25px;
   border: 10px coral solid;
 }
-/*
 .list_text{
   background-color: black;
 }
-*/
 .active{
-  color:red;
+  color: coral;
   text-decoration: underline;
   box-sizing:
 }
