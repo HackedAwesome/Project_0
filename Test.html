@@ -4,14 +4,36 @@
     <meta charset="utf-8">
     <title></title>
     <style>
-      button{
-        cursor: pointer;
-        background: transparent;
-      }
+      *{
+        font-size: 35px;
+      };
     </style>
   </head>
   <body>
-    <button type="button" onclick="alert('Worning!!!!!!!!')">button</button>
-    <input type="button" value="<a>Click me!" onclick="alert(1+1)">
+    <script>
+      var Ch = {
+        "a" : "apple",
+        "b" : "banana",
+        "c" : "car"
+      };
+      var A = "aaaa<br>";
+      document.write(A+"");
+      document.write(Ch.a+"<br>");
+      Ch.d = "digital clock";
+      document.write(Ch.d+"<br><br><br>");
+      re=Ch.a+"<br>";
+      document.write(re.repeat(2));
+    </script>
+    <h1>Display</h1>
+    <script>
+      Ch.Show = function(){
+        for(var key in Ch){
+          document.write(key+'<br>');
+        };
+
+        }
+      Ch.Show();
+
+    </script>
   </body>
 </html>
