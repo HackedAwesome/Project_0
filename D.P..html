@@ -4,6 +4,39 @@
     <meta charset="utf-8">
     <title>D.P.</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+      function NightHandler(self){
+        var target = document.querySelector('body');
+        var i= 0;
+        if(self.value === 'night')
+        {
+          target.style.backgroundColor = 'black';
+          target.style.color = 'white';
+          self.value = 'day';
+
+          var links = document.querySelectorAll('.list_text');
+          var i = 0;
+          while(i<links.length)
+          {
+            links[i].style.backgroundColor= 'white';
+            i = i+1;
+          }
+        }
+        else
+        {
+          target.style.backgroundColor = 'white'
+          target.style.color = 'black';
+          self.value = 'night';
+
+          var links = document.querySelectorAll('.list_text');
+          while(i<links.length)
+          {
+            links[i].style.backgroundColor= 'black';
+            i = i+1;
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     <div class="outline horizon">
@@ -13,35 +46,7 @@
       <div id="night_mode">
         <div id="night_botton">
           <input type="button" value="night" onclick="
-            var target = document.querySelector('body');
-            var i= 0;
-            if(this.value === 'night')
-            {
-              target.style.backgroundColor = 'black';
-              target.style.color = 'white';
-              this.value = 'day';
-
-              var links = document.querySelectorAll('.list_text');
-              var i = 0;
-              while(i<links.length)
-              {
-                links[i].style.backgroundColor= 'white';
-                i = i+1;
-              }
-            }
-            else
-            {
-              target.style.backgroundColor = 'white'
-              target.style.color = 'black';
-              this.value = 'night';
-
-              var links = document.querySelectorAll('.list_text');
-              while(i<links.length)
-              {
-                links[i].style.backgroundColor= 'black';
-                i = i+1;
-              }
-            }
+            NightHandler(this);
           ">
         </div>
       </div>
