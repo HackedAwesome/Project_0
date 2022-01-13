@@ -4,17 +4,59 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <title>Hellbound</title>
+    <script>
+      function NightHandler(self){
+        var target = document.querySelector('body');
+        var i= 0;
+        if(self.value === 'night')
+        {
+          target.style.backgroundColor = 'black';
+          target.style.color = 'white';
+          self.value = 'day';
+
+          var links = document.querySelectorAll('.list_text');
+          var i = 0;
+          while(i<links.length)
+          {
+            links[i].style.backgroundColor= 'white';
+            i = i+1;
+          }
+        }
+        else
+        {
+          target.style.backgroundColor = 'white'
+          target.style.color = 'black';
+          self.value = 'night';
+
+          var links = document.querySelectorAll('.list_text');
+          while(i<links.length)
+          {
+            links[i].style.backgroundColor= 'black';
+            i = i+1;
+          }
+        }
+      }
+    </script>
   </head>
   <body>
-    <div class="outline">
-      <a id="home_menu" href="index.html"><h1>&lt;&lt;&lt; Go Back</h1></a>
-    </div>
-    <div class="outline horizon" style="">
+    <div class="outline horizon">
       <div>
-        <ul class="menu">
-          <li><a href="Squid_Game.html"><h2>Squid Game</h2></a></li>
-          <li><a href="D.P..html"><h2>D.P.</h2></a></li>
-          <li><h2 class="active" id="aa">Hellbound</h2></li>
+        <a id="home_menu" href="index.html"><h1>&lt;&lt;&lt; Go Back</h1></a>
+      </div>
+      <div id="night_mode">
+        <div id="night_botton">
+          <input type="button" value="night" onclick="
+            NightHandler(this);
+          ">
+        </div>
+      </div>
+    </div>
+    <div class="outline horizon">
+      <div>
+        <ul>
+          <li class="list"><a href="Squid_Game.html"><h2 class="list_text">Squid Game</h2></a></li>
+          <li class="list"><a href="D.P..html"><h2 class="list_text">D.P.</h2></a></li>
+          <li class="list"><h2 class="active list_text" id="aa">Hellbound</h2></li>
         </ul>
       </div>
       <div id="img_outline">
