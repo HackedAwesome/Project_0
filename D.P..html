@@ -5,13 +5,27 @@
     <title>D.P.</title>
     <link rel="stylesheet" href="style.css">
     <script>
+
+      var setcolor = {
+        bodybackgorund : function(color){
+          document.querySelector('body').style.backgroundColor = color;
+        },
+        bodytext : function(color){
+          document.querySelector('body').style.color = color;
+        },
+        
+      }
+
+
       function NightHandler(self){
         var target = document.querySelector('body');
         var i= 0;
         if(self.value === 'night')
         {
-          target.style.backgroundColor = 'black';
-          target.style.color = 'white';
+          setcolor.bodybackgorund('black');
+          // target.style.backgroundColor = 'black';
+          setcolor.bodytext('white');
+          // target.style.color = 'white';
           self.value = 'day';
 
           var links = document.querySelectorAll('.list_text');
@@ -24,8 +38,10 @@
         }
         else
         {
-          target.style.backgroundColor = 'white'
-          target.style.color = 'black';
+          setcolor.bodybackgorund('white');
+          // target.style.backgroundColor = 'white';
+          setcolor.bodytext('black');
+          // target.style.color = 'black';
           self.value = 'night';
 
           var links = document.querySelectorAll('.list_text');

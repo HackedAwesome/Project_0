@@ -27,11 +27,11 @@
     <h1>Display</h1>
     <script>
       Ch.Show = function(){
-        for(var key in Ch){
-          document.write(key+'<br>');
+        for(var key in this){
+          document.write(key+" : "+this[key]+'<br>');
         };
 
-        }
+      };
       Ch.Show();
 
     </script>
