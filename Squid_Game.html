@@ -4,44 +4,12 @@
     <meta charset="utf-8">
     <title>Squid_Game</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-      function NightHandler(self){
-        var target = document.querySelector('body');
-        var i= 0;
-        if(self.value === 'night')
-        {
-          target.style.backgroundColor = 'black';
-          target.style.color = 'white';
-          self.value = 'day';
-
-          var links = document.querySelectorAll('.list_text');
-          var i = 0;
-          while(i<links.length)
-          {
-            links[i].style.backgroundColor= 'white';
-            i = i+1;
-          }
-        }
-        else
-        {
-          target.style.backgroundColor = 'white'
-          target.style.color = 'black';
-          self.value = 'night';
-
-          var links = document.querySelectorAll('.list_text');
-          while(i<links.length)
-          {
-            links[i].style.backgroundColor= 'black';
-            i = i+1;
-          }
-        }
-      }
-    </script>
+    <script src="colors.js"></script>
   </head>
   <body>
     <div class="outline horizon">
       <div>
-        <a id="home_menu" href="index.html"><h1>&lt;&lt;&lt; Go Back</h1></a>
+        <a id="home_menu" href="index.html"><h1>&lt;&lt;&lt; Home</h1></a>
       </div>
       <div id="night_mode">
         <div id="night_botton">
